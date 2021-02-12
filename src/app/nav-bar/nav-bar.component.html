@@ -1,0 +1,27 @@
+<nav>
+  <ul>
+    <li class="logo"><img src="assets/prime.svg" /></li>
+    <li class="btn" (click)="menu()">
+      <span><fa-icon *ngIf="!isShown" [icon]="iconFaBars"></fa-icon></span>
+      <span><fa-icon *ngIf="isShown" [icon]="iconFaTimes"></fa-icon></span>
+    </li>
+
+    <div @menuApp [ngClass]="{ show: isShown == true }" class="items">
+      <li><a href="#"> Início</a></li>
+      <li><a href="#">Séries</a></li>
+      <li><a href="#">Filmes</a></li>
+      <li><a href="#">Infantil</a></li>
+    </div>
+    <li class="search-icon">
+      <input type="search" placeholder="Buscar" />
+      <label class="icon"
+        ><span><fa-icon [icon]="faSearch"></fa-icon></span
+      ></label>
+    </li>
+    <li class="user">
+      <label class="login"
+        ><span><fa-icon [icon]="faUser"></fa-icon></span
+      ></label>
+    </li>
+  </ul>
+</nav>

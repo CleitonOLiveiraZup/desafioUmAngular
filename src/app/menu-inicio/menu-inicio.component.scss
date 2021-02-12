@@ -1,0 +1,85 @@
+$itemGrow: 1.2;
+$duration: 250ms;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+h1 {
+  font-family: Arial;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+}
+
+.wrapperUm {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+  section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+
+    img {
+      width: 280px;
+      height: 150px;
+    }
+
+    .itens {
+      padding: 0 2px;
+      transition: $duration all;
+
+      &:hover {
+        margin: 0 40px;
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+    }
+
+    a {
+      position: absolute;
+      color: #fff;
+      text-decoration: none;
+      font-size: 6em;
+      background: rgb(0, 0, 0);
+      width: 80px;
+      padding: 20px;
+      text-align: center;
+      z-index: 1;
+
+      &:nth-of-type(1) {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        height: 127px;
+        width: 30px;
+        background: transparent;
+      }
+      &:nth-of-type(2) {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        height: 127px;
+        width: 30px;
+        background: transparent;
+      }
+    }
+  }
+}
+
+// Remove the arrow for Mobile
+@media only screen and (max-width: 600px) {
+  a.arrow__btn {
+    display: none;
+  }
+}

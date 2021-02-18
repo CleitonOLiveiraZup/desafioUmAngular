@@ -1,0 +1,23 @@
+<h2>{{ title }}</h2>
+
+<ngx-slick-carousel [config]="sliderConfig" class="carousel">
+  <div class="slick-item" *ngFor="let m of movies.results" ngxSlickItem>
+    <div class="container">
+      <div class="card">
+        <div class="imgBx">
+          <img
+            class="filme"
+            src="https://image.tmdb.org/t/p/w200{{ m?.poster_path }} "
+            alt="{{ m.title }}"
+          />
+        </div>
+        <div class="content">
+          <h3>
+            {{ m.title }}
+          </h3>
+          <p>Treinada desde cedo para ser uma guerreira imbatível.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ngx-slick-carousel>

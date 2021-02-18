@@ -1,0 +1,71 @@
+
+.play{
+  max-width: 30px;
+  height: 30px;
+  margin-top: -60px;
+}
+.filme{
+  width: 135px !important;
+  margin-left: 15px !important;
+  }
+
+  h3{
+    color: white;
+    margin-top: 125px;
+  }
+
+  p{
+    margin-top: 10px;
+    color: white;
+  }
+
+.container{
+  background: #161E26;
+}
+
+.container .card{
+  position: relative;
+  width: 205px;
+  height: 280px;
+  background: transparent;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.9);
+  transition: 0.5s;
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover{
+  height: 355px;
+  cursor: pointer;
+}
+
+.container .card .imgBx{
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+
+.container .card .imgBx img{
+  width: 280px;
+  border-radius: 4px;
+  margin-left: -10px;
+}
+
+.container .card .content{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content{
+  visibility: visible;
+  opacity: 1;
+}

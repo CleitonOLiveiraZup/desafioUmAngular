@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit} from '@angular/core';
+
 import { faCoffee, faBars, faSearch, faUser, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({

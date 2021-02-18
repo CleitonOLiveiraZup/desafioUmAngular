@@ -1,14 +1,15 @@
 import {AfterViewInit, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Subscription} from 'rxjs';
-import {Movies} from './models/movies';
-import {MovieService} from './services/movie.service';
+
+import {Movies} from '../../models/movies';
+import {MovieService} from '../../services/movie.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-menu-infantil',
+  templateUrl: './menu-infantil.component.html',
+  styleUrls: ['./menu-infantil.component.scss']
 })
-export class AppComponent implements OnInit {
+export class MenuInfantilComponent implements  OnInit {
   sticky = false;
   subs: Subscription[] = [];
   trending: Movies;
@@ -41,9 +42,4 @@ export class AppComponent implements OnInit {
     this.subs.push(this.movie.getNowPlaying().subscribe(data => this.nowPlaying = data));
 
   }
-
-  
-
-
 }
-
